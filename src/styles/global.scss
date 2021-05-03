@@ -1,0 +1,32 @@
+@use './variables/color';
+@use './variables/fonts';
+
+@use './header/header';
+@use './input/input';
+@use './cards/cards';
+@use './badge/badge';
+
+.container {
+  display: flex;
+  gap: 2rem;
+
+  @media only screen and (max-width: 1400px) {
+    flex-direction: column;
+  }
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 3rem;
+
+  img {
+    height: 100px;
+  }
+}
+
+.brand-link {
+  height: 60px;
+  width: 60px;
+}

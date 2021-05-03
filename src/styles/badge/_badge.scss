@@ -1,0 +1,39 @@
+@use '../variables/color' as *;
+@use '../variables/fonts' as *;
+
+@mixin badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-weight: $font-wg-bold;
+}
+
+.badge-holder {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.done-badge {
+  @include badge;
+  border: 5px solid $spring-light;
+  background: $spring-normal;
+  color: $spring-dark;
+}
+
+.current-badge {
+  @include badge;
+  border: 5px solid $summer-light;
+  background: $summer-normal;
+  color: $snow-white;
+}
+
+.hold-badge {
+  @include badge;
+  border: 5px solid $lilac-light;
+  background: $lilac-normal;
+  color: $snow-white;
+}

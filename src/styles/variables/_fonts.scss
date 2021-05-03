@@ -1,0 +1,57 @@
+@use '../variables/color' as *;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&family=Source+Serif+Pro:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+
+// Font family
+$header-font: "Source Serif Pro", serif;
+$body-font: "Source Sans Pro", sans-serif;
+
+// Font size
+$font-sz-xl: clamp(2.441rem, 2.5vw, 3.052rem);
+$font-sz-lg: clamp(1.953rem, 2.5vw, 2.45rem);
+$font-sz-md: 1.563rem;
+$font-sz-sm: 1.125rem;
+$font-sz-xs: 1rem;
+
+// Font weight
+$font-wg-bold: 900;
+$font-wg-semi: 700;
+
+h1 {
+  font-family: $header-font;
+  font-size: $font-sz-xl;
+  color: $spring-dark;
+}
+
+h2 {
+  font-family: $body-font;
+  font-size: $font-sz-lg;
+}
+
+h3 {
+  font-family: $body-font;
+  font-size: $font-sz-md;
+  color: $spring-dark;
+}
+
+h4 {
+  font-size: $font-sz-sm;
+  font-family: $body-font;
+}
+
+h5 {
+  font-family: $body-font;
+  font-size: $font-sz-sm;
+  font-weight: $font-wg-semi;
+  line-height: 165%;
+}
+
+p {
+  font-family: $body-font;
+  font-size: $font-sz-xs;
+  line-height: 165%;
+}
+
+a {
+  font-family: $body-font;
+}

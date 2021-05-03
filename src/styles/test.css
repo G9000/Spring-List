@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&family=Source+Serif+Pro:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+
+:root {
+  --color--snow-light: hsl(0, 0%, 100%);
+  --color--spring-light: hsl(154, 100%, 87%);
+  --color--spring-normal: hsl(155, 73%, 67%);
+  --color--spring-dark: hsl(180, 100%, 13%);
+  --color--autum-light: hsl(0, 100%, 84%);
+  --color--autum-normal: hsl(0, 91%, 73%);
+  --color--autum-dark: hsl(0, 96%, 60%);
+  --color--summer-dark: hsl(202, 74%, 39%);
+  --color--summer-normal: hsl(219, 79%, 63%);
+  --color--summer-light: hsl(219, 96%, 78%);
+
+  --font--size-xl: 3.052rem;
+  --font--size-lg: 2.45rem;
+  --font--size-md: 1.563rem;
+  --font--size-sm: 1.125rem;
+
+  --font--weight-semi: 700;
+  --font--weight-bold: 900;
+}
+
+h1 {
+  font-family: "Source Serif Pro", serif;
+  font-size: var(--font--size-xl);
+  color: var(--color--spring-dark);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 145%;
+}
+
+h3 {
+  font-size: var(--font--size-md);
+  color: var(--color--spring-dark);
+}
+
+/* Button */
+
+.add-list {
+  background: var(--color--spring-normal);
+  color: var(--color--spring-dark);
+  border-color: var(--color--spring-light);
+  border: 5px solid var(--color--spring-light);
+  font-size: var(--font--size-md);
+  font-weight: var(--font--weight-bold);
+}
+
+/* Input */
+
+.title-input,
+.title-input::placeholder {
+  font-size: var(--font--size-md);
+  color: var(--color--spring-dark);
+  font-weight: var(--font--weight-bold);
+}
+
+.message-input,
+.message-input::placeholder {
+  color: var(--color--spring-dark);
+}
+
+/* List card */
+
+.list-content h3 {
+  font-size: var(--font--size-md);
+  font-weight: var(--font--weight-bold);
+  color: var(--color--spring-dark);
+}
+
+.trash-btn {
+  color: var(--color--snow-light);
+  background: var(--color--autum-normal);
+  border: 3px solid var(--color--autum-light);
+}
+
+.trash-btn:hover {
+  background: var(--color--autum-dark);
+  border-color: var(--color--autum-dark);
+  transition: all 300ms ease;
+}
+
+.check-btn {
+  color: var(--color--snow-light);
+  background: var(--color--spring-normal);
+  border: 3px solid var(--color--spring-light);
+}
+
+.check-btn:hover {
+  background: var(--color--spring-dark);
+  border-color: var(--color--spring-dark);
+  transition: all 300ms ease;
+}
+
+.edit-btn {
+  color: var(--color--snow-light);
+  background: var(--color--summer-normal);
+  border: 3px solid var(--color--summer-light);
+}
+
+.edit-btn:hover {
+  background: var(--color--summer-dark);
+  border-color: var(--color--summer-dark);
+  transition: all 300ms ease;
+}
+
+/* list card status */
+
+.list-card {
+  background: var(--color--snow-light);
+}
+
+.list-done {
+  background: var(--color--spring-normal);
+}
+
+/* Badge */
+
+.done-badge {
+  background: var(--color--spring-normal);
+  color: var(--color--spring-dark);
+  font-weight: var(--font--weight-bold);
+  border: 5px solid var(--color--spring-light);
+  box-shadow: 4px 4px 25px -15px hsla(0, 0%, 0%, 0.4);
+}
+
+.current-badge {
+  background: var(--color--summer-normal);
+  color: var(--color--snow-light);
+  font-weight: var(--font--weight-bold);
+  border: 5px solid var(--color--summer-light);
+  box-shadow: 4px 4px 25px -15px hsla(0, 0%, 0%, 0.4);
+}
