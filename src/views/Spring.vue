@@ -56,18 +56,17 @@ export default {
     },
 
      // Load persistence
-    created() {
-         if (localStorage.getItem("lists", "dones")) {
-        this.user = JSON.parse(localStorage.getItem("user"))
-        this.lists = JSON.parse(localStorage.getItem("lists"));
-        this.dones = JSON.parse(localStorage.getItem("dones"));
-        this.holds = JSON.parse(localStorage.getItem('holds'))
-        }
-    },
-
 
     mounted() {
 
+         if (localStorage.getItem("lists", "dones", "holds", "user")) {
+        this.user = JSON.parse(localStorage.getItem("user"))
+        this.lists = JSON.parse(localStorage.getItem("lists"));
+        this.dones = JSON.parse(localStorage.getItem("dones"));
+        this.holds = JSON.parse(localStorage.getItem("holds"))
+        }
+        
+        
         if(this.user.length < 1) {
             this.user = prompt("What should I call you?")
             return
@@ -122,6 +121,7 @@ export default {
         onDone(index) {
             let done = this.lists.splice(index, 1)
             Array.prototype.push.apply(this.dones, done)
+            console.log(done)
         },
 
 
@@ -165,8 +165,8 @@ export default {
         lists: {
             handler() {
                 localStorage.setItem("user", JSON.stringify(this.user))
-                localStorage.setItem("lists", JSON.stringify(this.lists))
                 localStorage.setItem("dones", JSON.stringify(this.dones))
+                localStorage.setItem("lists", JSON.stringify(this.lists))
                 localStorage.setItem("holds", JSON.stringify(this.holds))
             },
             deep: true
